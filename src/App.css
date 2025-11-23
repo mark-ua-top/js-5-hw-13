@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.portal-label {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.open-btn,
+.submit-btn {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 20px;
+  transition: opacity 0.2s ease;
+}
+
+.open-btn:hover,
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.submit-btn {
+  background: #00a2ff;
+  color: white;
+  margin-top: 10px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window,
+.result-modal-window {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  position: relative;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-window.show,
+.result-modal-window.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-window input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+}
